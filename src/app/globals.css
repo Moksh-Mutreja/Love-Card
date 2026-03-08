@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: system-ui, ui-sans-serif, sans-serif;
+  --font-body: system-ui, ui-sans-serif, sans-serif;
+  --color-rose-950: #2a0414;
+  --shadow-soft-card: 0 18px 45px rgba(244, 114, 182, 0.25);
+}
+
+@layer base {
+  :root {
+    --bg-gradient: radial-gradient(circle at top, #ffe4e6 0, #fdf2f8 40%, #fdf2ff 100%);
+  }
+
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      sans-serif;
+    background-image: var(--bg-gradient);
+    color: #4a0d3c;
+  }
+}
+
+@layer components {
+  .card-glass {
+    @apply rounded-3xl bg-white/80 shadow-soft-card backdrop-blur-xl border border-white/60;
+  }
+
+  .btn-primary {
+    @apply relative overflow-hidden inline-flex items-center justify-center rounded-full px-8 py-3 text-base font-bold text-white transition-all duration-300;
+    background: linear-gradient(180deg, #ff4d4d 0%, #cc0000 100%);
+    box-shadow:
+      0 4px 15px rgba(204, 0, 0, 0.4),
+      inset 0 -4px 8px rgba(0, 0, 0, 0.2),
+      inset 0 4px 8px rgba(255, 255, 255, 0.3);
+    font-family: var(--font-cursive), cursive, system-ui;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-primary::before {
+    content: "";
+    @apply absolute top-0 left-0 w-full h-1/2 bg-white/20;
+    border-radius: 999px 999px 0 0;
+    pointer-events: none;
+  }
+
+  .btn-primary:hover:not(:disabled) {
+    @apply scale-105;
+    background: linear-gradient(180deg, #e60000 0%, #b30000 100%);
+    box-shadow:
+      0 6px 20px rgba(204, 0, 0, 0.6),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.2),
+      inset 0 4px 8px rgba(255, 255, 255, 0.4);
+  }
+
+  .btn-primary:disabled {
+    @apply opacity-60 cursor-not-allowed grayscale;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-full border border-rose-100 bg-white/40 px-4 py-2 text-sm font-medium text-rose-500 hover:bg-white;
+  }
+}

@@ -266,7 +266,7 @@ After deployment to Vercel:
 
 - **GitHub Repository:** [https://github.com/Moksh-Mutreja/Love-Card](https://github.com/Moksh-Mutreja/Love-Card)
 - **Live Demo (under progress):** [https://love-confession-cards.vercel.app](https://love-confession-cards.vercel.app)
-- **Project Documentation:** [Google Drive Link](https://drive.google.com/file/d/1NaMovvY5zj4Eyoyg5tTtxUWd8CfIdmTl/view?usp=sharing)
+- **Pitch+Demo:** [Google Drive Link](https://drive.google.com/file/d/1NaMovvY5zj4Eyoyg5tTtxUWd8CfIdmTl/view?usp=sharing)
 
 ---
 
